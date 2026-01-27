@@ -36,7 +36,7 @@ if [ -e /dev/kvm ]; then\n\
   echo "✅ KVM acceleration available"\n\
   KVM_ARG="-enable-kvm"\n\
   CPU_ARG="host"\n\
-  MEMORY="4G"\n\
+  MEMORY="12G"\n\
   SMP_CORES=4\n\
 else\n\
   echo "⚠️  KVM not available - using slower emulation mode"\n\
@@ -74,7 +74,7 @@ qemu-system-x86_64 \\\n\
   -cpu $CPU_ARG \\\n\
   -m $MEMORY \\\n\
   -smp $SMP_CORES \\\n\
-  -vga std \\\n\
+  -vga qxl \\\n\
   -usb -device usb-tablet \\\n\
   $BOOT_ORDER \\\n\
   -drive file=/data/disk.qcow2,format=qcow2 \\\n\
