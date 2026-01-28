@@ -41,9 +41,7 @@ git clone https://github.com/ZarkosX/windows10vm
 
 cd windows10vm
 
-
 docker build -t windows10-vm .
-
 
 docker run -it --rm \
   --device /dev/kvm \
@@ -52,3 +50,7 @@ docker run -it --rm \
   -v windows_data:/data \
   -v windows_iso:/iso \
   windows10-vm
+
+```bash
+bash Start.sh
+```
