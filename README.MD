@@ -50,6 +50,7 @@ docker run -it --rm \
   -v windows_data:/data \
   -v windows_iso:/iso \
   windows10-vm
+```
 
 ```bash
 bash Start.sh
