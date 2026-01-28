@@ -65,7 +65,7 @@ if [ ! -s "/data/disk.qcow2" ] || [ $(stat -c%s "/data/disk.qcow2") -lt 1048576 
   BOOT_ORDER="-boot order=d,menu=on"\n\
 fi\n\
 \n\
-echo "⚙️ Starting Windows 10 VM with ${SMP_CORES} CPU cores and ${MEMORY} RAM"\n\
+echo "⚙️  Starting Windows 10 VM with ${SMP_CORES} CPU cores and ${MEMORY} RAM"\n\
 \n\
 # Start QEMU with Windows-optimized settings\n\
 qemu-system-x86_64 \\\n\
